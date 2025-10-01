@@ -1,27 +1,84 @@
-# BrylWebsitePortfolio
+# Bryl Website Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+A personal portfolio website built with Angular, showcasing projects, experience, and contact information. It features a Home page, light/dark theme support, a small UI icon library, and Tailwind CSS styling.
 
-## Development server
+## Tech Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 20
+- Tailwind CSS 4 (via PostCSS)
+- RxJS 7
+- Custom UI icon library under `libs/ui/ui-icon-helm`
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Home page feature module (`src/app/feature/home-page`)
+- Theme service for light/dark mode (`src/app/shared/services/theme.service.ts`)
+- Custom Helm icon lib and DI token (`libs/ui/ui-icon-helm`)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+- Node.js LTS (recommended)
+- npm (comes with Node)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installation
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Development Server
 
-## Further help
+```bash
+npm start
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Then open `http://localhost:4200/`. The app reloads automatically on code changes.
+
+## Available Scripts
+
+```bash
+# Start dev server
+npm start
+
+# Production build (outputs to dist/)
+npm run build
+
+# Rebuild on changes (development configuration)
+npm run watch
+
+# Run unit tests (Karma + Jasmine)
+npm test
+```
+
+## Development Notes
+
+### Theming
+- The `ThemeService` provides a simple light/dark mode toggle and state. Use it within components to read or toggle the current theme.
+
+### Icons
+- The `ui-icon-helm` library contains an icon component and token. Import and provide it where needed to render Helm-based icons across the app.
+
+### Styling
+- Tailwind CSS 4 is configured via PostCSS. Global styles live in `src/styles.css`. Component styles are colocated with their components.
+
+## Building
+
+```bash
+npm run build
+```
+
+The production build is emitted to the `dist/` directory.
+
+## Testing
+
+```bash
+npm test
+```
+
+Runs unit tests via Karma and Jasmine.
+
+## License
+
+This is a personal portfolio project. All rights reserved.
