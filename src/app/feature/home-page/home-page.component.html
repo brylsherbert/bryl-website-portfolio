@@ -1,0 +1,238 @@
+<div class="max-w-4xl mx-auto px-4 py-8">
+    <section class="flex justify-center gap-8">
+        <div class="flex gap-4 w-full mb-8">
+            <!-- Profile Photo -->
+            <div class="w-40 h-40 flex shrink-0">
+                <img src="assets/images/bryl-portrait.jpg" alt="Portrait of Bryl Sherbert Magdadaro" 
+                class="h-full w-full rounded-xl object-cover" />
+            </div>
+            <!-- Profile Details -->
+            <div class="grow-1 flex flex-col gap-4 sm:gap-8">
+                <!-- Details -->
+                <div class="flex justify-between">
+                    <!-- Name / Location / Role -->
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-lg sm:text-xl font-semibold">
+                            Bryl Sherbert Magdadaro
+                        </h2>
+                        <p class="flex items-center gap-1 text-xs font-light">
+                            <ng-icon hlm size="sm" name="lucideMapPin" />
+                            Cebu City, Philippines
+                        </p>
+                        <h4 class="text-[11px] sm:text-sm font-light">
+                            Front-end Developer / Mobile Application Developer
+                        </h4>
+                    </div>
+                    <!-- Dark Mode Toggle -->
+                    <div class="dark-mode-toggle">
+                            <button type="button" (click)="toggleTheme()" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground transition-colors" aria-label="Toggle theme">
+                            <span class="sr-only">Toggle theme</span>
+                            <ng-icon hlm size="sm" [name]="currentTheme() === 'dark' ? 'lucideMoon' : 'lucideSun'" />
+                        </button>
+                    </div>
+                </div>
+                <!-- Buttons -->
+                <div class="flex gap-2 flex-wrap">
+                    <div>
+                        <a href="https://calendly.com/magdadarobryl/30min" aria-label="Email" target="_blank" rel="noopener"
+                        class="p-4 inline-flex h-8 items-center justify-center gap-1 text-[10px] sm:text-[12px] rounded-md border border-border
+                        bg-foreground text-background hover:bg-accent hover:text-accent-foreground  transition-colors">
+                            <ng-icon hlm size="sm" name="lucideCalendar"/>
+                            <span>Schedule a Meeting</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:magdadarobryl@gmail.com" aria-label="Email" target="_blank" rel="noopener"
+                        class="p-4 inline-flex h-8 items-center justify-center gap-1 text-[10px] sm:text-[12px] rounded-md border border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
+                            <ng-icon hlm size="sm" name="lucideMail"/>
+                            <span>Send Email</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="assets/bryl-sherbert-2025.pdf" aria-label="Download CV" download target="_blank" rel="noopener"
+                        class="p-4 inline-flex h-8 items-center justify-center gap-1 text-[10px] sm:text-[12px] rounded-md border border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
+                            <ng-icon hlm size="sm" name="lucideDownload"/>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/brylsherbert" aria-label="Email" target="_blank" rel="noopener"
+                        class="p-4 inline-flex h-8 items-center justify-center gap-1 text-[10px] sm:text-[12px] rounded-md border border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
+                            <ng-icon hlm size="sm" name="lucideGithub"/>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/bryl-sherbert-magdadaro-595b311a6/" aria-label="Email" target="_blank" rel="noopener"
+                        class="p-4 inline-flex h-8 items-center justify-center gap-1 text-[10px] sm:text-[12px] rounded-md border border-border bg-background text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
+                            <ng-icon hlm size="sm" name="lucideLinkedin"/>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-6 gap-2">
+        <div class="about-container bg-card md:col-span-4 p-4 border border-border rounded-md flex flex-col gap-4">
+            <!-- Objective -->
+            <div>
+                <div class="flex gap-2 items-center">
+                    <ng-icon hlm size="sm" name="lucideBox"/>
+                    <h2 class="font-bold text-base md:text-lg">Objective</h2>
+                </div>
+                <p class="text-sm text-muted-foreground">Results-driven Mobile Developer specializing in cross-platform app development using Angular, Ionic, and Capacitor, with strong skills in feature integration, performance optimization, and app publishing.</p>
+            </div>
+            <!-- Tech Stack -->
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-2 items-center">
+                    <ng-icon hlm size="sm" name="lucideBraces"/>
+                    <h2 class="font-bold text-base md:text-lg">Skills / Tech Stack</h2>
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-[11px]">
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Angular</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Ionic</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Capacitor</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">TypeScript</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Tailwind</span>
+                </div>
+            </div>
+            <!-- Services -->
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-2 items-center">
+                    <ng-icon hlm size="sm" name="lucideWrench"/>
+                    <h2 class="font-bold text-base md:text-lg">Services</h2>
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-[11px]">
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Web Development</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Ionic Mobile Development</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">API Integration</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Performance Optimization</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Figma to Code</span>
+                </div>
+            </div>
+            <!-- Tools -->
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-2 items-center">
+                    <ng-icon hlm size="sm" name="lucideNewspaper"/>
+                    <h2 class="font-bold text-base md:text-lg">Tools</h2>
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-[11px]">
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Git</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">GitHub</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">VS Code</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">JIRA</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Trello</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">GitLab</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Discord</span>
+                </div>
+            </div>
+            <!-- Certification -->
+            <!--    
+                <div class="flex gap-2 items-center">
+                    <ng-icon hlm size="sm" name="lucideNewspaper"/>
+                    <h2 class="font-bold text-base md:text-lg">Certification</h2>
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-[11px]">
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Store Publishing - 2024</span>
+                    <span class="rounded-md bg-accent px-2 py-0.5 text-accent-foreground">Angular Advanced - 2023</span>
+                </div>
+            </div> -->
+        </div>
+        <div class="experience-container bg-card border border-border rounded-md md:col-span-2 p-4">
+            <div class=" group flex-1">
+                <div class="flex items-center gap-2">
+                    <ng-icon hlm size="sm" name="lucideBriefcaseBusiness"/>
+                    <h2 class="text-lg font-bold">Experience</h2>
+                </div>
+                <div class="relative space-y-4 mt-4">
+                    <div class="absolute left-[5.5px] top-1.5 bottom-2 w-px h-51 bg-border"></div>
+                    <div class="relative pl-6 group/role">
+                        <div class="absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 
+                            border-accent bg-foreground 
+                            transition-colors"></div>
+                        <div class="space-y-1">
+                            <h3 class="text-sm font-semibold 
+                            text-foreground 
+                            transition-colors">Mobile Application Developer</h3>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs">TVStartup Inc.</span>
+                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10">2024-Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-6 group/role">
+                        <div class="absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 
+                            border-border group-hover/role:bg-foreground 
+                            transition-colors"></div>
+                        <div class="space-y-1">
+                            <h3 class="text-sm font-semibold 
+                            transition-colors">WordPress Developer</h3>
+                            <div class="flex items-center justify-between"><span class="text-xs text-foreground/70 ">TVStartup Inc.</span><span class="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10
+                            ">2023-2024 </span></div>
+                        </div>
+                    </div>
+                    <div class="relative pl-6 group/role">
+                        <div class="absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 
+                            border-border group-hover/role:bg-foreground 
+                            transition-colors"></div>
+                        <div class="space-y-1">
+                            <h3 class="text-sm font-semibold 
+                            transition-colors">WordPress Developer / Video Editor</h3>
+                            <div class="flex items-center justify-between"><span class="text-xs text-foreground/70 ">Lettra Press LLC.</span>
+                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10">2021-2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-6 group/role">
+                        <div class="absolute left-0 top-1.5 w-3 h-3 rounded-full border-2 
+                            border-border group-hover/role:bg-foreground 
+                            transition-colors"></div>
+                        <div class="space-y-1">
+                            <h3 class="text-sm font-semibold 
+                            transition-colors">BS Information Technology</h3>
+                            <div class="flex items-center justify-between"><span class="text-xs text-foreground/70">AMA Computer College</span>
+                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10">2015-2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- My Projects -->
+        <div class="projects-container flex flex-col gap-4 min-h-30 bg-card border border-border rounded-md md:col-span-4 p-4">
+            <h2 class="font-bold text-base md:text-xl">Projects</h2>
+            <swiper-container slidesPerView="1.2" spaceBetween="24" autoplay class="bg-card rounded-md border border-border p-2">
+                <swiper-slide class="jet-stream-app">
+                    <a href="https://github.com/brylsherbert/jet-stream-app" target="_blank" rel="noopener noreferrer" class="block">
+                        <div class="project-card flex flex-col md:flex-row gap-4 items-start justify-center bg-card rounded-md p-4" >
+                            <img src="assets/images/jet-stream-app.png" alt="JetStream App" class="rounded-md shadow-md w-24 h-24 object-cover" />
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Jet Stream App</h3>
+                                <p class="text-sm text-foreground/70 mb-2">Jet Stream is a movie search app that allows users to explore the latest and existing movies, including popular titles like Batman. Built using Angular v19, Ionic v8, and Capacitor v7, this app provides a smooth and interactive user experience.</p>
+                                <div class="flex flex-wrap gap-1 text-xs">
+                                    <span class="bg-accent text-accent-foreground rounded px-2 py-0.5">Angular v19</span>
+                                    <span class="bg-accent text-accent-foreground rounded px-2 py-0.5">Ionic v8</span>
+                                    <span class="bg-accent text-accent-foreground rounded px-2 py-0.5">Capacitor v7</span>
+                                    <span class="bg-accent text-accent-foreground rounded px-2 py-0.5">TMDb API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </swiper-slide>
+            </swiper-container>
+        </div>
+        <!-- Call to Action -->
+        <div class="min-h-15 md:col-span-2 flex flex-col gap-2">
+            <div class="rounded-md border border-border bg-card p-4 grow-1">
+                <h3 class="text-sm font-semibold mb-2">Call to Action</h3>
+                <p class="text-xs text-muted-foreground">Let’s talk about your project.</p>
+                <div class="mt-2 flex gap-1.5">
+                    <a href="mailto:magdadarobryl@gmail.com" class="inline-flex items-center justify-center rounded-md bg-primary px-2.5 py-1 text-xs text-primary-foreground">Email</a>
+                    <a href="https://www.linkedin.com/in/bryl-sherbert-magdadaro-595b311a6/" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-md border border-border px-2.5 py-1 text-xs">Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

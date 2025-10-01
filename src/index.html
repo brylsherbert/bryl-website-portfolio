@@ -6,6 +6,19 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    // On page load or when changing themes, best to inline to avoid FOUC
+    (function () {
+      try {
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var stored = localStorage.getItem('theme');
+        var isDark = stored === 'dark' || (!stored && prefersDark);
+        document.documentElement.classList.toggle('dark', isDark);
+      } catch (e) {
+        // no-op
+      }
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>
