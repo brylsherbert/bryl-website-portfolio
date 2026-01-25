@@ -1,0 +1,5 @@
+swiper-container {
+    --swiper-pagination-color: #22c55e; 
+    --swiper-pagination-bullet-inactive-color: rgb(255, 255, 255);
+    --swiper-pagination-bottom: 0;
+}
