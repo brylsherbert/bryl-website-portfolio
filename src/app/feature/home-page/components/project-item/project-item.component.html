@@ -1,16 +1,43 @@
-<a [href]="projectUrl()" target="_blank" rel="noopener noreferrer" class="block">
-    <div class="project-card flex flex-col lg:flex-row gap-4 items-center justify-center bg-card rounded-md p-4" >
-        <img [src]="imageUrl()" alt="JetStream App" class="rounded-md shadow-md object-contain w-full lg:w-1/3" />
-        <div>
-            <h3 class="font-semibold text-base mb-1">{{ appName() }}</h3>
-            <p class="text-xs text-foreground/70 mb-2 line-clamp-3">{{ appDescription() }} </p>
+<div class="project-link-card group">
+    <div class="project-card h-full w-full flex items-center justify-center bg-card rounded-md p-4 transition duration-300" [class.project-card--featured]="featured()">
+        <div class="flex w-full max-w-3xl flex-col items-start justify-center gap-4 sm:flex-row">
+            <img [src]="imageUrl()" alt="{{ appName() }}" title="{{ appName() }}" class="project-image self-start rounded-md object-contain w-full sm:w-2/5 lg:w-1/3 transition duration-300" />
+            <div class="project-content self-start">
+                <h3 class="font-semibold text-base mb-1">{{ appName() }}</h3>
+                <p class="project-description text-xs text-foreground/70 mb-2 line-clamp-3">{{ appDescription() }} </p>
 
-            <!-- Tech Stacks -->
-            <div class="flex flex-wrap gap-1 text-xs">
-                @for (stack of techStacks(); track $index) {
-                    <span class="bg-accent text-accent-foreground rounded px-2 py-0.5">{{ stack }}</span>
-                }
+                <!-- Tech Stacks -->
+                <div class="flex flex-wrap gap-1 text-xs">
+                    @for (stack of techStacks(); track $index) {
+                    <span class="project-stack bg-accent text-accent-foreground rounded px-2 py-0.5">{{ stack }}</span>
+                    }
+                </div>
+
+                <div class="project-actions">
+                    @if (projectUrl()) {
+                    <a [href]="projectUrl()" target="_blank" rel="noopener noreferrer" class="project-action-link"
+                        [attr.aria-label]="'View ' + appName() + ' on GitHub'">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-current">
+                            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.71 0 0 .84-.28 2.75 1.05A9.31 9.31 0 0 1 12 6.99c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.4.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.8 0 .27.18.6.69.49A10.21 10.21 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    }
+
+                    @if (liveUrl()) {
+                    <a [href]="liveUrl()" target="_blank" rel="noopener noreferrer"
+                        class="project-action-link project-action-link--live"
+                        [attr.aria-label]="'Open live app for ' + appName()">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h8v8" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />
+                        </svg>
+                        <span>{{ liveLabel() }}</span>
+                    </a>
+                    }
+                </div>
             </div>
         </div>
     </div>
-</a>
+</div>

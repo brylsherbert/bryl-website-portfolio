@@ -3,3 +3,37 @@ swiper-container {
     --swiper-pagination-bullet-inactive-color: rgb(255, 255, 255);
     --swiper-pagination-bottom: 0;
 }
+
+.projects-swiper {
+    height: 29rem;
+}
+
+.projects-swiper swiper-slide {
+    display: flex;
+    align-items: center;
+}
+
+.projects-swiper app-project-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.about-chip {
+    border: 1px solid rgb(34 197 94 / 0.18);
+    padding: 0.25rem 0.625rem;
+}
+
+
+@media (min-width: 640px) {
+    .projects-swiper {
+        height: 16rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-swiper {
+        height: 16.5rem;
+    }
+}
