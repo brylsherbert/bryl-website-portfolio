@@ -229,9 +229,9 @@
         <div
             class="projects-container flex flex-col gap-4 min-h-30 bg-card border hover:border-green-500/30 rounded-md shadow-sm shadow-green-500/10 md:col-span-4 p-4">
             <h2 class="font-bold text-base md:text-xl">Projects</h2>
-            <swiper-container pagination slidesPerView="1.2" centeredSlides="true" spaceBetween="24" autoplay loop speed="1200"
-                class="projects-swiper bg-card rounded-md border p-2">
-                @for (app of apps(); track app.name) {
+            <swiper-container [slidesPerView]="1" [spaceBetween]="16"
+                [autoplay]="projectSwiperAutoplay" pagination [speed]="700" class="projects-swiper bg-card rounded-md border p-2">
+                @for (app of apps(); track app.id) {
                 <swiper-slide class="h-full">
                     <app-project-item [appName]="app.name" [appDescription]="app.description"
                         [techStacks]="app.techStacks" [imageUrl]="app.imageUrl" [projectUrl]="app.projectUrl"
