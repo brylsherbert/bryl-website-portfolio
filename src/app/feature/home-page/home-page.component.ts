@@ -95,7 +95,7 @@ export class HomePageComponent {
   private _featuredProject = signal({
     name: 'PennyWise',
     description:
-      'A full-stack personal finance app with budget tracking, category management, account flows, reports, budget health indicators, authentication, validation, and deployment-ready backend infrastructure.',
+      "A Financial Management Platform built to help small businesses easily manage their expenses and budgets. Designed as a free-to-use solution, it empowers users to organize spending, create and track budgets, and monitor financial health with clear reports and insights—all in one secure and user-friendly app.",
     techStacks: [
       'PostgreSQL',
       'Node.js',
@@ -145,7 +145,7 @@ export class HomePageComponent {
       id: 3,
       name: 'PennyWise',
       description:
-        'PennyWise is a budget expense tracker for managing budgets, categories, accounts, and expense, income, and fill transactions with summaries, reports, budget health, and profile settings.',
+        'A Financial Management Platform built to help small businesses easily manage their expenses and budgets.',
       techStacks: [
         'PostgreSQL',
         'Node.js',
