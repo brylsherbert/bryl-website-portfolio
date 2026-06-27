@@ -110,9 +110,9 @@ export class HomePageComponent {
       'TypeScript',
     ],
     imageUrl: 'assets/images/pennywise-app/budgets-page.png',
-    projectUrl: '',
+    projectUrl: 'https://github.com/brylsherbert/pennywise-backend',
     liveUrl: 'https://usepennywise.netlify.app',
-    liveLabel: 'Live App',
+    liveLabel: 'Netlify',
     liveNote: 'View the hosted PennyWise demo on Netlify.',
   });
 
