@@ -64,9 +64,10 @@ export class HomePageComponent {
 
   private _skillTechStacks = signal([
     'Node.js',
-    'PostgreSQL',
-    'Express.js',
     'Angular',
+    'Express.js',
+    'PostgreSQL',
+    'MongoDB',
     'Ionic',
     'Docker',
     'Capacitor',
