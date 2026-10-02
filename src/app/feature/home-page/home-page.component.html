@@ -36,11 +36,11 @@
                 <!-- Buttons -->
                 <div class="flex gap-2 flex-wrap">
                     <div>
-                        <a href="https://calendly.com/magdadarobryl/30min" aria-label="Email" target="_blank"
+                        <a href="https://calendly.com/magdadarobryl/30min" aria-label="Let's talk — book a time on Calendly" target="_blank"
                             rel="noopener" class="p-4 inline-flex h-8 items-center justify-center gap-1 text-[10px] sm:text-[12px] rounded-md border border-border
                         bg-foreground text-background hover:bg-accent hover:text-accent-foreground  transition-colors">
                             <ng-icon hlm size="sm" name="lucideCalendar" />
-                            <span>Schedule a Meeting</span>
+                            <span>Let's talk</span>
                         </a>
                     </div>
                     <div>
@@ -84,12 +84,18 @@
             <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                     <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-green-500">Featured Build</p>
-                    <h2 class="font-bold text-xl md:text-2xl">Financial Management Platform for Small Businesses</h2>
+                    <h2 class="font-bold text-xl md:text-2xl">Sports Venue Booking Platform for Cebu</h2>
                 </div>
-                <span
-                    class="w-fit rounded-full border hover:border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-medium text-green-500">
-                    Full-Stack Project
-                </span>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="w-fit rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-600 dark:text-amber-400">
+                        In progress
+                    </span>
+                    <span
+                        class="w-fit rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-600 dark:text-sky-400">
+                        On testing
+                    </span>
+                </div>
             </div>
             <app-project-item [appName]="featuredProject().name" [appDescription]="featuredProject().description"
                 [techStacks]="featuredProject().techStacks" [imageUrl]="featuredProject().imageUrl"
@@ -176,6 +182,30 @@
                                 <span class="text-xs">TVStartup Inc.</span>
                                 <span
                                     class="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-foreground/5 border border-foreground/10">2024-Present</span>
+                            </div>
+                            <div class="mt-2 space-y-2 pt-1">
+                                <p class="text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                                    Latest production apps
+                                </p>
+                                @for (productionApp of tvStartupProductionApps(); track productionApp.name) {
+                                <div class="space-y-1">
+                                    <span class="text-[11px] font-medium text-foreground/90">{{ productionApp.name }}</span>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        @if (productionApp.appStoreUrl) {
+                                        <a [href]="productionApp.appStoreUrl" target="_blank" rel="noopener noreferrer"
+                                            class="text-[10px] rounded-md border border-border px-2 py-0.5 hover:bg-accent hover:text-accent-foreground transition-colors">
+                                            App Store
+                                        </a>
+                                        }
+                                        @if (productionApp.playStoreUrl) {
+                                        <a [href]="productionApp.playStoreUrl" target="_blank" rel="noopener noreferrer"
+                                            class="text-[10px] rounded-md border border-border px-2 py-0.5 hover:bg-accent hover:text-accent-foreground transition-colors">
+                                            Google Play
+                                        </a>
+                                        }
+                                    </div>
+                                </div>
+                                }
                             </div>
                         </div>
                     </div>

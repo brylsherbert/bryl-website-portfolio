@@ -69,6 +69,8 @@ export class HomePageComponent {
     'React Native',
     'Flutter',
     'Express.js',
+    'Stripe',
+    'PayMongo',
     'PostgreSQL',
     'MongoDB',
     'Ionic',
@@ -97,31 +99,90 @@ export class HomePageComponent {
     'GitLab',
   ]);
 
+  private _tvStartupProductionApps = signal([
+    {
+      name: 'Takeover TV',
+      appStoreUrl: 'https://apps.apple.com/us/app/takeover-tv/id1632365369',
+      playStoreUrl: '',
+    },
+    {
+      name: 'Health News Network',
+      appStoreUrl: '',
+      playStoreUrl:
+        'https://play.google.com/store/apps/details?id=com.healthnewsnetwork.app',
+    },
+  ]);
+
   private _featuredProject = signal({
-    name: 'PennyWise',
+    name: 'CourtBook',
     description:
-      "A Financial Management Platform built to help small businesses easily manage their expenses and budgets. Designed as a free-to-use solution, it empowers users to organize spending, create and track budgets, and monitor financial health with clear reports and insights—all in one secure and user-friendly app.",
+      'A full-stack sports venue booking platform for discovering pickleball courts in Cebu, reserving courts online, and managing venues, bookings, and users from an admin dashboard. Includes payment integrations with Stripe and PayMongo (GCash) for checkout and booking flows. Built with a modular Angular frontend and a layered Express API backed by PostgreSQL—currently in active development and live testing.',
     techStacks: [
       'PostgreSQL',
+      'Prisma',
       'Node.js',
       'Express.js',
+      'Stripe',
+      'PayMongo',
       'Docker',
       'JWT',
-      'Rate Limiting',
       'Zod',
       'Angular',
-      'Ionic',
-      'Capacitor',
+      'Spartan UI',
+      'Tailwind CSS',
       'TypeScript',
     ],
-    imageUrl: 'assets/images/pennywise-app/budgets-page.png',
-    projectUrl: 'https://github.com/brylsherbert/pennywise-backend',
-    liveUrl: 'https://usepennywise.netlify.app',
+    imageUrl: 'assets/images/courtbook/courtbookcebu-admin-dashboard.png',
+    projectUrl: '',
+    liveUrl: 'https://courtbookcebu.netlify.app',
     liveLabel: 'Netlify',
-    liveNote: 'View the hosted PennyWise demo on Netlify.',
+    liveNote: 'Live testing deployment on Netlify.',
   });
 
   private _apps = signal([
+    {
+      id: 4,
+      name: 'CourtBook',
+      description:
+        'Sports venue booking platform for Cebu pickleball courts—browse venues, reserve courts, and manage bookings and users, with Stripe and PayMongo (GCash) payment integration. In progress; live on Netlify for testing.',
+      techStacks: [
+        'PostgreSQL',
+        'Prisma',
+        'Node.js',
+        'Express.js',
+        'Stripe',
+        'PayMongo',
+        'Angular',
+        'Spartan UI',
+        'TypeScript',
+        'Tailwind CSS',
+      ],
+      imageUrl: 'assets/images/courtbook/courtbookcebu-admin-dashboard.png',
+      projectUrl: '',
+      liveUrl: 'https://courtbookcebu.netlify.app',
+      liveLabel: 'Netlify',
+      liveNote: '',
+    },
+    {
+      id: 3,
+      name: 'PennyWise',
+      description:
+        'A Financial Management Platform built to help small businesses easily manage their expenses and budgets.',
+      techStacks: [
+        'PostgreSQL',
+        'Node.js',
+        'Express.js',
+        'Docker',
+        'Angular',
+        'Ionic',
+        'Capacitor',
+        'TypeScript',
+      ],
+      imageUrl: 'assets/images/pennywise-app/budgets-page.png',
+      projectUrl: '',
+      liveUrl: 'https://usepennywise.netlify.app',
+      liveLabel: 'Live App',
+    },
     {
       id: 1,
       name: 'Jet Stream App',
@@ -146,26 +207,6 @@ export class HomePageComponent {
       liveLabel: 'Live Demo',
       liveNote: '',
     },
-    {
-      id: 3,
-      name: 'PennyWise',
-      description:
-        'A Financial Management Platform built to help small businesses easily manage their expenses and budgets.',
-      techStacks: [
-        'PostgreSQL',
-        'Node.js',
-        'Express.js',
-        'Docker',
-        'Angular',
-        'Ionic',
-        'Capacitor',
-        'TypeScript',
-      ],
-      imageUrl: 'assets/images/pennywise-app/budgets-page.png',
-      projectUrl: '',
-      liveUrl: 'https://usepennywise.netlify.app',
-      liveLabel: 'Live App',
-    },
   ]);
 
   protected skillTechStacks = this._skillTechStacks.asReadonly();
@@ -173,6 +214,7 @@ export class HomePageComponent {
   protected tools = this._tools.asReadonly();
   protected featuredProject = this._featuredProject.asReadonly();
   protected apps = this._apps.asReadonly();
+  protected tvStartupProductionApps = this._tvStartupProductionApps.asReadonly();
 
   constructor() {
     effect(() => {
