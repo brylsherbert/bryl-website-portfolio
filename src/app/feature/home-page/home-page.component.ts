@@ -65,6 +65,9 @@ export class HomePageComponent {
   private _skillTechStacks = signal([
     'Node.js',
     'Angular',
+    'React',
+    'React Native',
+    'Flutter',
     'Express.js',
     'PostgreSQL',
     'MongoDB',
@@ -76,6 +79,7 @@ export class HomePageComponent {
   ]);
 
   private _services = signal([
+    'Cross-Platform Development',
     'Full-Stack Web Development',
     'Front-end Development',
     'Ionic Mobile Development',
